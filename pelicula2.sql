@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 25-03-2022 a las 14:31:37
+-- Tiempo de generación: 25-03-2022 a las 14:45:45
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `pelicula`
+-- Base de datos: `pelicula2`
 --
 
 -- --------------------------------------------------------
@@ -39,8 +39,7 @@ CREATE TABLE `actor` (
 --
 
 INSERT INTO `actor` (`id_actor`, `nom_actor`, `ape_actor`, `edad_actor`) VALUES
-(1047876556, 'Leonardo', 'DiCaprio ', 47),
-(1567834432, 'Jennifer ', 'Lawrence', 31);
+(1047876556, 'Leonardo', 'DiCaprio ', 47);
 
 -- --------------------------------------------------------
 
@@ -50,8 +49,8 @@ INSERT INTO `actor` (`id_actor`, `nom_actor`, `ape_actor`, `edad_actor`) VALUES
 
 CREATE TABLE `escena` (
   `cod_esc` int(11) NOT NULL,
-  `num_esc` int(11) DEFAULT NULL,
-  `esen_esc` varchar(45) DEFAULT NULL,
+  `num_esc` int(11) NOT NULL,
+  `esen_esc` varchar(45) NOT NULL,
   `personajes_cod_personaje` int(11) NOT NULL,
   `actor_id_actor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
